@@ -1,0 +1,46 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from InterService WSDL service -->
+
+  <service name="Inter" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://soapassignment.accolite.com"/>
+      <parameter name="wsdlServiceElement" value="InterService"/>
+      <parameter name="schemaQualified" value="http://soapassignment.accolite.com"/>
+      <parameter name="wsdlServicePort" value="Inter"/>
+      <parameter name="className" value="com.accolite.soapassignment.InterSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="Inter"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="updateEmp" qname="operNS:updateEmp" xmlns:operNS="http://soapassignment.accolite.com" returnQName="retNS:updateEmpReturn" xmlns:retNS="http://soapassignment.accolite.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://soapassignment.accolite.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:name" xmlns:pns="http://soapassignment.accolite.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:department" xmlns:pns="http://soapassignment.accolite.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:age" xmlns:pns="http://soapassignment.accolite.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="insertEmp" qname="operNS:insertEmp" xmlns:operNS="http://soapassignment.accolite.com" returnQName="retNS:insertEmpReturn" xmlns:retNS="http://soapassignment.accolite.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://soapassignment.accolite.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:name" xmlns:pns="http://soapassignment.accolite.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:department" xmlns:pns="http://soapassignment.accolite.com" type="tns:string" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+        <parameter qname="pns:age" xmlns:pns="http://soapassignment.accolite.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="deleteEmp" qname="operNS:deleteEmp" xmlns:operNS="http://soapassignment.accolite.com" returnQName="retNS:deleteEmpReturn" xmlns:retNS="http://soapassignment.accolite.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://soapassignment.accolite.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getEmp" qname="operNS:getEmp" xmlns:operNS="http://soapassignment.accolite.com" returnQName="retNS:getEmpReturn" xmlns:retNS="http://soapassignment.accolite.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://soapassignment.accolite.com" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getAllEmp" qname="operNS:getAllEmp" xmlns:operNS="http://soapassignment.accolite.com" returnQName="retNS:getAllEmpReturn" xmlns:retNS="http://soapassignment.accolite.com" returnType="rtns:string" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+      </operation>
+      <parameter name="allowedMethods" value="deleteEmp insertEmp getEmp getAllEmp updateEmp"/>
+
+  </service>
+</deployment>

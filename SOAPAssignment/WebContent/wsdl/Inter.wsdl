@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://soapassignment.accolite.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://soapassignment.accolite.com" xmlns:intf="http://soapassignment.accolite.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://soapassignment.accolite.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="updateEmp">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+      <element name="name" type="xsd:string"/>
+      <element name="department" type="xsd:string"/>
+      <element name="age" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateEmpResponse">
+    <complexType>
+     <sequence>
+      <element name="updateEmpReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="insertEmp">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+      <element name="name" type="xsd:string"/>
+      <element name="department" type="xsd:string"/>
+      <element name="age" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="insertEmpResponse">
+    <complexType>
+     <sequence>
+      <element name="insertEmpReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteEmp">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteEmpResponse">
+    <complexType>
+     <sequence>
+      <element name="deleteEmpReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEmp">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getEmpResponse">
+    <complexType>
+     <sequence>
+      <element name="getEmpReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAllEmp">
+    <complexType/>
+   </element>
+   <element name="getAllEmpResponse">
+    <complexType>
+     <sequence>
+      <element name="getAllEmpReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="deleteEmpResponse">
+
+      <wsdl:part element="impl:deleteEmpResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateEmpRequest">
+
+      <wsdl:part element="impl:updateEmp" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEmpResponse">
+
+      <wsdl:part element="impl:getEmpResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="insertEmpRequest">
+
+      <wsdl:part element="impl:insertEmp" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getEmpRequest">
+
+      <wsdl:part element="impl:getEmp" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateEmpResponse">
+
+      <wsdl:part element="impl:updateEmpResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteEmpRequest">
+
+      <wsdl:part element="impl:deleteEmp" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAllEmpRequest">
+
+      <wsdl:part element="impl:getAllEmp" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="insertEmpResponse">
+
+      <wsdl:part element="impl:insertEmpResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAllEmpResponse">
+
+      <wsdl:part element="impl:getAllEmpResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Inter">
+
+      <wsdl:operation name="updateEmp">
+
+         <wsdl:input message="impl:updateEmpRequest" name="updateEmpRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateEmpResponse" name="updateEmpResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="insertEmp">
+
+         <wsdl:input message="impl:insertEmpRequest" name="insertEmpRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:insertEmpResponse" name="insertEmpResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteEmp">
+
+         <wsdl:input message="impl:deleteEmpRequest" name="deleteEmpRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteEmpResponse" name="deleteEmpResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEmp">
+
+         <wsdl:input message="impl:getEmpRequest" name="getEmpRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getEmpResponse" name="getEmpResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAllEmp">
+
+         <wsdl:input message="impl:getAllEmpRequest" name="getAllEmpRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAllEmpResponse" name="getAllEmpResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="InterSoapBinding" type="impl:Inter">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="updateEmp">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateEmpRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateEmpResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="insertEmp">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="insertEmpRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="insertEmpResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteEmp">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteEmpRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteEmpResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getEmp">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getEmpRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getEmpResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getAllEmp">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAllEmpRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAllEmpResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="InterService">
+
+      <wsdl:port binding="impl:InterSoapBinding" name="Inter">
+
+         <wsdlsoap:address location="http://localhost:8081/SOAPAssignment/services/Inter"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
