@@ -2,9 +2,10 @@ POOL TAXI
 
 Assumptions:
 Taxi stand can hold 5 taxis.
-All the newly arriving passengers are given the highest priority and hence assigned first.
 Passengers select from a predefined set of 10 destinations.
+All the newly arriving passengers are given the highest priority and hence assigned first.
 Taxi once assigned to the stand can wait for 50 seconds.
+To avoid starvation the passenger queue and taxi queue is processed every 2 seconds from the start to the end.
 Passengers are generated every 3 seconds.
 New taxi arrives once every 35 seconds.
 For better execution - generate passengers once every 4 seconds and taxis once every 20 seconds
