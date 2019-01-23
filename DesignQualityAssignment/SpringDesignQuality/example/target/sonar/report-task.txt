@@ -1,0 +1,6 @@
+projectKey=com.au.spring:example
+serverUrl=http://localhost:9000
+serverVersion=6.7.6.38781
+dashboardUrl=http://localhost:9000/dashboard/index/com.au.spring:example
+ceTaskId=AWh5rSs_byi01JsQ1QHb
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWh5rSs_byi01JsQ1QHb
