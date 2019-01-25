@@ -1,0 +1,21 @@
+<!-- <p class="sectionheader jumbotron">
+  search works!
+  <span class="books">
+    hello inside
+  </span>
+</p>
+<p class="sectionheader jumbotron">
+    <span *ngIf="book && book.bookName">{{book.bookName}}</span>
+</p> -->
+
+<!-- <div class="jumbotron">
+  <div *ngFor="let book of books">
+  </div>
+</div> -->
+
+<div *ngFor="let book of books" class="container"  class="row">
+    <div class="col-sm-6">{{book.bookName}}</div>
+    <div class="col-sm-4"> <button type="button" (click)="checkout(book)" class="btn btn-secondary">
+        Checkout
+      </button></div>
+  </div>
